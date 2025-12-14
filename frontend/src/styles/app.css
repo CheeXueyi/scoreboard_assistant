@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.scoreboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.team {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.team-red {
+  background: #ff0000;
+}
+
+.team-blue {
+  background: #0000ff;
+}
+
+.score {
+  font-size: 20vw;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+.controls {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.team-red .controls {
+  left: 30px;
+}
+
+.team-blue .controls {
+  right: 30px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+.controls button:active {
+  opacity: 0.8;
+}
+
+.reset-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  z-index: 10;
+}
+
+.reset-btn:active {
+  opacity: 0.8;
+}
