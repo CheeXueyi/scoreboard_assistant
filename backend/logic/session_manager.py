@@ -25,6 +25,8 @@ class SessionManager:
         'updates the session state of session with given session code'
         if session_code not in self.sessions:
             raise Exception('No session with given session code')
+        if new_game_state['session_code'] != session_code:
+            raise Exception('New game state\'s session code does not match given session code')
 
         self.sessions[session_code] = new_game_state
 
@@ -48,4 +50,3 @@ class SessionManager:
             raise Exception('No session with given session code')
         
         self.sessions.pop(session_code)
-    
